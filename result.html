@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>フォーム入力内容の確認 | ANIMAL LAND</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .result {
+            border-collapse: collapse;
+        }
+        .result th, .result td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body id="top">
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="images/shoplogos.svg" alt="animal land"></a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">ホーム<br>home</a></li>
+                <li><a href="index.html#news">お知らせ<br>news</a></li>
+                <li><a href="index.html#shop">店舗情報<br>shop-info</a></li>
+                <li><a href="access.html">アクセス<br>access</a></li>
+                <!-- ドロップダウンメニュー -->
+                <li class="dropdown">
+                    <a href="animals.html">動物<br>animals</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="animals.html#kittens">ネコ</a></li>
+                        <li><a href="animals.html#puppies">イヌ</a></li>
+                        <li><a href="animals.html#rabbits">うさぎ<br>齧歯類</a></li>
+                        <li><a href="animals.html#reptiles">爬虫類</a></li>
+                        <li><a href="nekocafe.html">猫カフェ</a></li>
+                    </ul>
+                </li>
+                <!-- ここまで「動物」 -->
+                <li><a href="products.html">グッズ紹介<br>products<br>introduction</a></li>
+                <li><a href="faq.html">よくある質問<br>faq</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ヘッダーここまで -->
+    <!-- 見出し&ヒーロー -->
+    <h1 class="hero contact">お問い合わせ</h1>
+    <!-- 見出し&ヒーローここまで -->
+    <!-- メイン -->
+    <main>
+        <h2>フォームの入力内容は正しく送信されていますか？</h2>
+        <table id="result" class="result">
+            <tr>
+                <th>設問</th>
+                <th>入力内容</th>
+            </tr>
+        </table>
+    </main>
+    <!-- メインここまで -->
+    <!-- フッター -->
+    <footer>
+        <div class="gotop">
+            <a href="#top" aria-label="トップページへ戻る"><img src="images/gotop.png" alt="ページトップへ戻る"></a>
+        </div>
+        <p class="copyright">&copy; 2025 ANIMAL LAND</p>
+    </footer>
+    <!-- フッターここまで -->
+    <script>
+        'use strict';
+
+        const render = function(q) {
+            const parent = document.getElementById('result');
+            for (const item of q) {
+                parent.insertAdjacentHTML('beforeend', `<tr><td>${item[0]}</td><td>${item[1]}</td></tr>`);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', (e) => {
+            try {
+                const urlParam = decodeURIComponent(location.search.replace(/\+/g, ' ')).slice(1);
+                const qList = urlParam.split('&');
+                const queries = [];
+                for (const item of qList) {
+                    const split = item.split('=');
+                    queries.push([split[0], split[1].split('<').join('&lt;').split('>').join('&gt;')]);
+                }
+                render(queries);
+            } catch(err) {
+                console.log(err);
+            }
+        });
+    </script>
+</body>
+</html>

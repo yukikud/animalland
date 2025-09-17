@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- レスポンシブデザインのため -->
+    <title>アニマルランドについて</title>
+    <meta name="description" content="ペットショップ『アニマルランド』へようこそ　＊このサイトはwebサイト作成練習用の架空のペットショップサイトです＊" /><!-- 検索時のwebサイト説明文 -->
+    <meta name="format-detection" content="telephone=no" /><!-- 番号を電話発信のリンクにしない -->
+    <!-- favicon/webclipicon -->
+        <link rel="icon" href="images/favicon.ico" />
+        <link rel="icon" href="images/shoplogos.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body id="top">
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="images/shoplogos.svg" alt="animal land"></a>
+            <p class="notes">＊このサイトはwebサイト作成練習用の架空のペットショップサイトです＊</p>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">ホーム<br>home</a></li>
+                <li><a href="index.html#news">お知らせ<br>news</a></li>
+                <li><a href="index.html#shop">店舗情報<br>shop-info</a></li>
+                <li><a href="access.html">アクセス<br>access</a></li>
+                <!-- 「動物」ドロップダウンメニュー -->
+                <li class="dropdown">
+                <a href="animals.html">動物<br>animals</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="animals.html#kittens">ネコ</a></li>
+                        <li><a href="animals.html#puppies">イヌ</a></li>
+                        <li><a href="animals.html#rabbits">うさぎ<br>齧歯類</a></li>
+                        <li><a href="animals.html#reptiles">爬虫類</a></li>
+                        <li><a href="nekocafe.html">猫カフェ</a></li>
+                    </ul>
+                </li>
+                <!-- ここまで「動物」 -->
+                <li><a href="products.html">グッズ紹介<br>products<br>introduction</a></li>
+                <li><a href="faq.html">よくある質問<br>faq</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!-- ヘッダーここまで -->
+    <h1 class="hero index">日常に魔法をかける<br>ちいさな命との暮らし</h1>
+    <!-- メイン -->
+    <main>
+        <p>ANIMAL LANDは「いのちに出会う場所」であり、「ふれあいを学ぶ広場」でありたいと考えています。<br>お客様の生活に寄り添うパートナー探しのお手伝いをさせてください。<br>
+        また、ご家庭で動物と暮らすことが困難なお客様でも動物と触れ合うことができるよう、ふれあいスペースや猫カフェもございます。</p>
+        <div class="animal-land-cat-room"><p class="banner">※クリックすると猫カフェサイトに移動します</p><a href="nekocafe.html"><img src="images/nekocafelogo.jpeg" alt="animal land cat rooom"></div></a>
+        <img src="images/banner.jpeg" alt="元気な猫さんたちが待ってます　遊びにきてね　猫さんたちのおやつタイムは12時と18時です" id="banner"><p class="banner">※猫をクリックすると鳴き声が聞こえます</p>
+        <audio id="bgm" src="audio/banner.mp3"></audio>
+        <script src="js/audio.js"></script>
+
+        <div id="news">
+            <h2>お知らせ</h2>
+            <ul>
+                <li>『予告』誠に勝手ながら9月21日は設備点検のため臨時休業いたします。ご不便をおかけします。</li>
+                <li>7月12日　猫カフェに新しいキャストが入りました。<a href="nekocafe.html#newcast">三毛猫のおこげ</a>です。仲良くしてください。</li>
+                <li>7月3日　爬虫類コーナーのふれあいスペースはしばらくお休みします。</li>
+                <li>6月20日　各動物のコーナーにふれあいスペースを設けました。各コーナー撮影タイムもございます。詳しい日時は店舗にてご確認ください。人数制限がありますが、是非お立ち寄りください。</li>
+                <li>6月15日　<a href="nekocafe.html#cat-gacha">猫カードガチャ</a>のカード、リアルカードとなりました。非売品ですので、毎月22日（猫の日）に猫カフェにご来店くださった方先着２２名にお配りします。どの子が当たるかはお楽しみです！</li>
+                <li>6月2日　ペットショップANIMAL LANDと<a href="nekocafe.html" target="_blank" rel=":noopener noreferrer">猫カフェ CAT ROOM</a>オープンしました！</li>
+            </ul>
+        </div>
+
+        <div id="shop">
+            <h2>店舗情報</h2>
+            <div class="shop-flex">
+                <table class="shop-info">
+                    <tr>
+                        <th>住所</th>
+                        <td>〒199-9999 東京都◯◯区××１−２−３（<a href="access.html">地図</a>）</td>
+                    </tr>
+                    <tr>
+                        <th>電話番号</th>
+                        <td>012−2345−6789</td>
+                    </tr>
+                    <tr>
+                        <th>営業時間</th>
+                        <td>10:00～22:00</td>
+                    </tr>
+                    <tr>
+                        <th>定休日</th>
+                        <td>1月1日・2日・3日<br>8月13日・14日・15日<br>12月29日・30日・31日</td>
+                    </tr>
+                    <tr>
+                        <th>お問合せ</th>
+                        <td><a href="tel:01223456789"><strong>お電話</strong></a>もしくは<a href="faq.html#contact"><strong>お問合せフォーム</strong></a>より受け付けております。
+                        </td>
+                    </tr>
+                </table>
+                <div class="billboard">
+                    <a href="access.html#landmark"><img src="images/billboard.png" alt="店舗外観"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- メインここまで -->
+    <!-- フッター -->
+    <footer>
+        <div class="gotop">
+            <a href="#top" aria-label="トップページへ戻る"><img src="images/gotop.png" alt="ページトップへ戻る"></a>
+        </div>
+        <p class="copyright">&copy; 2025 ANIMAL LAND</p>
+    </footer>
+    <!-- フッターここまで -->
+</body>
+<!-- js -->
+<script src="js/script.js"></script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- レスポンシブデザインのため -->
+    <title>よくある質問 | アニマルランドについて</title>
+    <meta name="description" content="ペットショップ『アニマルランド』へようこそ" /><!-- 検索時のwebサイト説明文 -->
+    <meta name="format-detection" content="telephone=no" /><!-- 番号を電話発信のリンクにしない -->
+    <!-- favicon/webclipicon -->
+        <link rel="icon" href="images/favicon.ico" />
+        <link rel="icon" href="images/shoplogos.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="images/shoplogos.png" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="images/shoplogos.svg" alt="animal land"></a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">ホーム<br>home</a></li>
+                <li><a href="index.html#news">お知らせ<br>news</a></li>
+                <li><a href="index.html#shop">店舗情報<br>shop-info</a></li>
+                <li><a href="access.html">アクセス<br>access</a></li>
+                <!-- ドロップダウンメニュー -->
+                <li class="dropdown">
+                <a href="animals.html">動物<br>animals</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="animals.html#kittens">ネコ</a></li>
+                        <li><a href="animals.html#puppies">イヌ</a></li>
+                        <li><a href="animals.html#rabbits">うさぎ<br>齧歯類</a></li>
+                        <li><a href="animals.html#reptiles">爬虫類</a></li>
+                        <li><a href="nekocafe.html">猫カフェ</a></li>
+                    </ul>
+                </li>
+                <!-- ここまで「動物」 -->
+                <li><a href="products.html">グッズ紹介<br>products<br>introduction</a></li>
+                <li><a href="faq.html">よくある質問<br>faq</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ヘッダーここまで -->
+    <h1 class="hero faq">faq</h1>
+    <!-- メイン -->
+    <main>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <h3>Q. トリミングの予約は必要ですか？</h3>
+            <div class="faq-answer">
+                はい、事前のご予約をおすすめしています。当日でも空きがあればご案内可能です。
+            </div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <h3>Q. ペットの同伴は可能ですか？</h3>
+            <div class="faq-answer">
+                人慣れしている子でしたら大丈夫です。リードをご着用またはケージに入れて、ご来店ください。
+            </div>
+        </div>
+        <form action="result.html">
+            <p>その他のお問い合わせ</p>
+            <p>
+                <label id="contact">お問い合わせの種類</label><br>
+                <select name="kind" id="kind">
+                    <option value="1">トリミングのご予約</option>
+                    <option value="2">動物に関するお問合せ</option>
+                    <option value="3">その他</option>
+                </select>
+            </p>
+            <p>
+                初めてのご来店ですか？<br>
+                <label><input type="radio" name="first" value="yes" checked>はい</label><br>
+                <label><input type="radio" name="first" value="no">いいえ</label>
+            </p>
+            <p>
+                当店をお知りになったきっかけは？<br>
+                <label><input type="checkbox" name="how" value="friend">知り合いの紹介で</label><br>
+                <label><input type="checkbox" name="how" value="magazine">SNS、Webサイト、雑誌などを見て</label><br>
+                <label><input type="checkbox" name="how" value="flyer">チラシ、ポスターを見て</label><br>
+                <label><input type="checkbox" name="how" value="other">その他（よければ下にご記入ください）</label><br>
+                <input type="text" name="how_other" placeholder="例：看板、実店舗を見て　など">
+            </p>
+            <p>
+                <label for="subject">お問い合わせの件名</label><br>
+                <input type="text" name="subject" placeholder="タイトル" id="subject">
+                <p>
+                    <label for="message">お問い合わせの具体的な内容</label><br>
+                    <textarea name="message"></textarea>
+                </p>
+                <p class="submit">
+                   <input type="submit" value="送信"> 
+                </p>
+            </p>
+        </form>
+    </main>
+    <!-- メインここまで -->
+    <!-- フッター -->
+    <footer>
+        <div class="gotop">
+            <a href="#top" aria-label="トップページへ戻る"><img src="images/gotop.png" alt="ページトップへ戻る"></a>
+        </div>
+        <p class="copyright">&copy; 2025 ANIMAL LAND</p>
+    </footer>
+    <!-- フッターここまで -->
+</body>
+<!-- js -->
+<script src="js/script.js"></script>
+
+</html>
