@@ -1,5 +1,6 @@
 # AnimalLand
 
+[![ロゴ画像](images/logo.png)](https://yukikud.github.io/animalland/)
 このリポジトリは、YukiがHTMLとCSSの学習工程の一環として制作した、完全オリジナルの動物紹介サイトです。  
 動物たちがやさしく登場し、クリックすると鳴き声や特徴が表示される演出を通して、**構造とスタイルの基礎を学ぶ**ことを目指しました。
 
