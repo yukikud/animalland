@@ -344,7 +344,7 @@ main h2 {
   color: #5b4444;
 }
 .gacha-button {
-  background-color: #504bb6;
+  background-color: #385544;
   color: #ffffff;
   border: none;
   padding: 0.8em 1.5em;
@@ -354,7 +354,8 @@ main h2 {
   transition: background 0.3s;
 }
 .gacha-button:hover {
-  background-color: #ff9aae;
+  background-color: #ced09a;
+  color: #385544;
 }
 
 /* products.html */
